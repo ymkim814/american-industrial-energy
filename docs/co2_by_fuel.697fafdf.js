@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"CApY":[function(require,module,exports) {
-module.exports = "https://cse412.github.io/american-industrial-energy/co2_by_fuel.c06c301c.csv";
+module.exports = "https://cse412-21w.github.io/american-industrial-energy/co2_by_fuel.c06c301c.csv";
 },{}],"NQYw":[function(require,module,exports) {
 "use strict";
 
@@ -171,4 +171,4 @@ function drawBarVegaLite() {
   });
 }
 },{"../static/co2_by_fuel.csv":"CApY"}]},{},["NQYw"], null)
-//# sourceMappingURL=https://cse412.github.io/american-industrial-energy/co2_by_fuel.697fafdf.js.map
+//# sourceMappingURL=https://cse412-21w.github.io/american-industrial-energy/co2_by_fuel.697fafdf.js.map
