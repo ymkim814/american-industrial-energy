@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>CSE 412 Project Demo</title>
+        <title>CSE 412 Project: American Industrial Energy</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <!-- For using d3 -->
@@ -18,8 +18,9 @@
 
     <body>
       <section class="title">
-        <a href="/">CSE 412 Demo</a>
+        <a href="/">CSE 412 Final Project: American Industrial Energy</a>
       </section>
+       <!-- 
       <section>
         <h2>Final Project</h2>
         <p>The final project will provide hands-on experience designing, implementing, 
@@ -30,13 +31,15 @@
           <a href='https://courses.cs.washington.edu/courses/cse412/21wi/fp.html'>course website</a>.
         </p>
       </section>
+      -->
+     <!-- 
       <section>
         <p><strong>This page is used mainly to demo how to embed visualizations. All visualizations below are
           not perfect and need more iteration critiques before really publishing on a webpage.
         </strong></p>
       </section>
-
-      
+     -->
+     <!-- 
       <section id = "tableauDemo"> 
         <h3>Embed a Tableau Visualization:</h3>
         <div class='tableauPlaceholder' id='viz1612344209794' style='position: relative'>
@@ -71,17 +74,25 @@
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
         </script>
       </section>
-    
-      <section id = "vegaDemo">
-        <h3>Embed a Vega-Lite Visualization:</h3>
-        <div id="view"></div>
+    -->
+      <section id = "co2_by_fuel">
+        <h3>Carbon dioxide emissions by fuel type:</h3>
+        <div id="co2_by_fuel"></div>
+        <p>The amount of CO2 per energy produced depends on the type of fuel. It is given
+          here in units of pounds of CO2 emitted per million British Thermal Units (BTU).
+          <br>
+          The higher the hydrogen to carbon ratio in the fuel, the lower the CO2 emissions.
+          Coal is primarily carbon, whereas natural gas (methane, CH4) has an H:C ratio of 4.
+          <br>
+          Source: <a href="https://www.eia.gov/tools/faqs/faq.php?id=73&t=11">EIA</a>
+        </p>  
       </section>
-    
+    <!--
       <section id = "d3Demo">
         <h3>Embed a D3 Visualization:</h3>
         <div id="d3-demo"></div>
       </section>
-
+    -->
       <div class="footer">
         <a href="https://courses.cs.washington.edu/courses/cse412/21wi/">CSE 412 Data Visualization</a>
         <a href="http://www.washington.edu">University of Washington</a>
@@ -90,7 +101,7 @@
       <!-- it is recommended to put js files before </body> -->
       <!-- or check load event fot addEventListener() if you want to put js in the <head> -->
       <script src="d3Demo.js"></script>
-      <script src="vegaDemo.js"></script>
+      <script src="co2_by_fuel.js"></script>
     </body>
 
 </html>
