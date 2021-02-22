@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"CApY":[function(require,module,exports) {
-module.exports = "https://cse412-21w.github.io/american-industrial-energy/co2_by_fuel.c06c301c.csv";
+module.exports = "https://cse412-21w.github.io/project-demo/co2_by_fuel.9af18b9a.csv";
 },{}],"NQYw":[function(require,module,exports) {
 "use strict";
 
@@ -164,11 +164,11 @@ function drawBarVegaLite() {
   vl.markBar({
     filled: true,
     color: 'black'
-  }).data(co2ByFuelArray).encode(vl.x().fieldN('Fuel').sort('none'), vl.y().fieldQ('CO2'), vl.tooltip(['CO2'])).width(450).height(450).render().then(function (viewElement) {
+  }).data(co2ByFuelArray).encode(vl.x().fieldN('Fuel').sort('none'), vl.y().fieldQ('CO2'), vl.tooltip(['Fuel', 'CO2'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
     document.getElementById('co2_by_fuel').appendChild(viewElement);
   });
 }
 },{"../static/co2_by_fuel.csv":"CApY"}]},{},["NQYw"], null)
-//# sourceMappingURL=https://cse412-21w.github.io/american-industrial-energy/co2_by_fuel.697fafdf.js.map
+//# sourceMappingURL=https://cse412-21w.github.io/project-demo/co2_by_fuel.dca154be.js.map
