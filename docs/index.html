@@ -77,9 +77,9 @@
         </script>
       </section>
     -->
-      <section id="world_co2_emissions">
+      <section id="world_co2_emissions_section">
         <h3>Global carbon dioxide emissions since 1750:</h3>
-        <div id="co2_by_fuel"></div>
+        <div id="world_co2_emissions"></div>
         <p>Since the beginning of the Industrial Revolution in the mid-18th century, the
           consumption of fossil fuels for the production of energy has steadily and nearly exponentially risen,
           and along with it the emissions of carbon dioxide.
@@ -88,7 +88,20 @@
             Our World in Data</a>
         </p>  
       </section>
-      <section id="co2_by_fuel">
+      <section id="hist_co2_conc_section">
+        <h3>Atmospheric carbon dioxide concentrations since 1750:</h3>
+        <div id="hist_co2_conc"></div>
+        <p>This has led to a steady rise in the atmospheric concentration of CO2 from about 278 ppm
+          before the Industrial Revolution to about 414 ppm in 2020.
+          <br>
+          Source: <a href="http://www.climatechange2013.org/images/report/WG1AR5_AIISM_Datafiles.xlsx">
+            IPCC (1750-1958)</a>,
+          <br>
+          <a href="https://www.esrl.noaa.gov/gmd/webdata/ccgg/trends/co2/co2_annmean_mlo.csv">
+            Mauna Loa Observatory/NOAA (1959-2020)</a>
+        </p>  
+      </section>
+      <section id="co2_by_fuel_section">
         <h3>Carbon dioxide emissions by fuel type:</h3>
         <div id="co2_by_fuel"></div>
         <p>The amount of CO2 per energy produced depends on the type of fuel. It is given
@@ -108,6 +121,7 @@
       <!-- it is recommended to put js files before </body> -->
       <!-- or check load event fot addEventListener() if you want to put js in the <head> -->
       <script src="https://cse412-21w.github.io/american-industrial-energy/world_co2_emissions.410745a2.js"></script>
+      <script src="https://cse412-21w.github.io/american-industrial-energy/hist_co2_conc.b37f5ab0.js"></script>
       <script src="https://cse412-21w.github.io/american-industrial-energy/co2_by_fuel.7e16abde.js"></script>
     </body>
 

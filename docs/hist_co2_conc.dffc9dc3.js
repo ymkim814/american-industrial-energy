@@ -117,12 +117,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../static/world_co2_emissions.csv":[function(require,module,exports) {
-module.exports = "/world_co2_emissions.a2492a3a.csv";
-},{}],"world_co2_emissions.js":[function(require,module,exports) {
+})({"../static/historical_co2_conc.csv":[function(require,module,exports) {
+module.exports = "/historical_co2_conc.011dde63.csv";
+},{}],"hist_co2_conc.js":[function(require,module,exports) {
 "use strict";
 
-var _world_co2_emissions = _interopRequireDefault(require("../static/world_co2_emissions.csv"));
+var _historical_co2_conc = _interopRequireDefault(require("../static/historical_co2_conc.csv"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -131,7 +131,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // With strict mode, you can not, for example, use undeclared variables
 
 
-var co2EmissionsArray = []; // used to store data later
+var co2ConcArray = []; // used to store data later
 
 var options = {
   config: {// Vega-Lite default configuration
@@ -151,26 +151,25 @@ var options = {
 };
 vl.register(vega, vegaLite, options); // Again, We use d3.csv() to process data
 
-d3.csv(_world_co2_emissions.default).then(function (data) {
+d3.csv(_historical_co2_conc.default).then(function (data) {
   data.forEach(function (d) {
-    co2EmissionsArray.push(d);
+    co2ConcArray.push(d);
   });
-  drawBarVegaLite();
+  drawLineVegaLite();
 });
 
-function drawBarVegaLite() {
+function drawLineVegaLite() {
   // var sunshine = add_data(vl, sunshine.csv, format_type = NULL);
   // your visualization goes here
-  vl.markBar({
-    filled: true,
-    color: 'black'
-  }).data(co2EmissionsArray).encode(vl.x().fieldQ('year').sort('none'), vl.y().fieldQ('co2'), vl.tooltip(['year', 'co2'])).width(450).height(450).render().then(function (viewElement) {
+  vl.markLine({
+    color: 'firebrick'
+  }).data(co2ConcArray).encode(vl.x().fieldT('Year'), vl.y().fieldQ('CO2 (ppm)'), vl.tooltip(['Year', 'CO2 (ppm)'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('world_co2_emissions').appendChild(viewElement);
+    document.getElementById('hist_co2_conc').appendChild(viewElement);
   });
 }
-},{"../static/world_co2_emissions.csv":"../static/world_co2_emissions.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../static/historical_co2_conc.csv":"../static/historical_co2_conc.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -374,5 +373,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","world_co2_emissions.js"], null)
-//# sourceMappingURL=/world_co2_emissions.0ce95c02.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","hist_co2_conc.js"], null)
+//# sourceMappingURL=/hist_co2_conc.dffc9dc3.js.map
