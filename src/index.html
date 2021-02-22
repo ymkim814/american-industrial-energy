@@ -18,7 +18,9 @@
 
     <body>
       <section class="title">
-        <a href="/">CSE 412 Final Project: American Industrial Energy</a>
+        <!-- <a href="/"> -->
+          CSE 412 Final Project: American Industrial Energy
+        <!-- </a> -->
       </section>
        <!-- 
       <section>
@@ -75,6 +77,17 @@
         </script>
       </section>
     -->
+      <section id = "world_co2_emissions">
+        <h3>Global carbon dioxide emissions since 1750:</h3>
+        <div id="co2_by_fuel"></div>
+        <p>Since the beginning of the Industrial Revolution in the mid-18th century, the
+          consumption of fossil fuels for the production of energy has steadily and nearly exponentially risen,
+          and along with it the emissions of carbon dioxide.
+          <br>
+          Source: <a href="https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv">
+            Our World in Data</a>
+        </p>  
+      </section>
       <section id = "co2_by_fuel">
         <h3>Carbon dioxide emissions by fuel type:</h3>
         <div id="co2_by_fuel"></div>
@@ -87,12 +100,6 @@
           Source: <a href="https://www.eia.gov/tools/faqs/faq.php?id=73&t=11">EIA</a>
         </p>  
       </section>
-    <!--
-      <section id = "d3Demo">
-        <h3>Embed a D3 Visualization:</h3>
-        <div id="d3-demo"></div>
-      </section>
-    -->
       <div class="footer">
         <a href="https://courses.cs.washington.edu/courses/cse412/21wi/">CSE 412 Data Visualization</a>
         <a href="http://www.washington.edu">University of Washington</a>
@@ -100,7 +107,7 @@
 
       <!-- it is recommended to put js files before </body> -->
       <!-- or check load event fot addEventListener() if you want to put js in the <head> -->
-      <script src="d3Demo.js"></script>
+      <script src="world_co2_emissions.js"></script>
       <script src="co2_by_fuel.js"></script>
     </body>
 

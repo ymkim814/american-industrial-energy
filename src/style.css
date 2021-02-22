@@ -33,6 +33,7 @@ p { margin: 0 0 10px 0; }
   font-size: 24pt;
   margin-bottom: 20px;
   margin-top: 5px;
+  text-align: center;
 }
  .footer {
   border-top: 1px solid #ccc;

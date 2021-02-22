@@ -41,7 +41,7 @@ function drawBarVegaLite() {
   .encode(
       vl.x().fieldN('Fuel').sort('none'),
       vl.y().fieldQ('CO2'),
-      vl.tooltip(['CO2']),
+      vl.tooltip(['Fuel','CO2']),
   )
   .width(450)
   .height(450)
