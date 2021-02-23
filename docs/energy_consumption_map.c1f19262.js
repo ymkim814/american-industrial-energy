@@ -117,59 +117,69 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../static/world_co2_ssp_cmip6.csv":[function(require,module,exports) {
-module.exports = "/world_co2_ssp_cmip6.1d7d0744.csv";
-},{}],"future_co2_emit.js":[function(require,module,exports) {
-"use strict";
-
-var _world_co2_ssp_cmip = _interopRequireDefault(require("../static/world_co2_ssp_cmip6.csv"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// import dataset
-"use strict"; // the code should be executed in "strict mode".
-// With strict mode, you can not, for example, use undeclared variables
-
-
-var co2EmitArray = []; // used to store data later
-
-var options = {
-  config: {// Vega-Lite default configuration
+})({"energy_consumption_map.js":[function(require,module,exports) {
+var yourVlSpec = {
+  $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+  width: 800,
+  height: 600,
+  selection: {
+    highlight: {
+      type: "single",
+      empty: "none",
+      on: "mouseover"
+    }
   },
-  init: function init(view) {
-    // initialize tooltip handler
-    view.tooltip(new vegaTooltip.Handler().call);
+  data: {
+    url: "https://vega.github.io/vega-datasets/data/us-10m.json",
+    format: {
+      type: "topojson",
+      feature: "counties"
+    }
   },
-  view: {
-    // view constructor options
-    // remove the loader if you don't want to default to vega-datasets!
-    //   loader: vega.loader({
-    //     baseURL: "",
-    //   }),
-    renderer: "canvas"
+  transform: [{
+    lookup: "id",
+    from: {
+      data: {
+        values: data_total
+      },
+      key: "id",
+      fields: ["MMBTU"]
+    }
+  }],
+  projection: {
+    type: "albersUsa"
+  },
+  mark: {
+    type: "geoshape",
+    stroke: "red"
+  },
+  encoding: {
+    color: {
+      field: "MMBTU",
+      type: 'quantitative',
+      scale: {
+        type: 'log',
+        range: 'diverging',
+        domainMid: 311789,
+        sort: 'descending'
+      }
+    },
+    strokeWidth: {
+      condition: [{
+        selection: "highlight",
+        value: 2
+      }],
+      value: 0
+    },
+    tooltip: {
+      field: "MMBTU",
+      format: ",.0f",
+      type: 'quantitative'
+    }
   }
 };
-vl.register(vega, vegaLite, options); // Again, We use d3.csv() to process data
-
-d3.csv(_world_co2_ssp_cmip.default).then(function (data) {
-  data.forEach(function (d) {
-    co2EmitArray.push(d);
-  });
-  drawLineVegaLite();
-});
-
-function drawLineVegaLite() {
-  // var sunshine = add_data(vl, sunshine.csv, format_type = NULL);
-  // your visualization goes here
-  vl.markLine({
-    color: 'green'
-  }).data(co2EmitArray).encode(vl.x().fieldT('Year'), vl.y().fieldQ('SSP1-19'), vl.tooltip(['Year', 'SSP1-19'])).width(450).height(450).render().then(function (viewElement) {
-    // render returns a promise to a DOM element containing the chart
-    // viewElement.value contains the Vega View object instance
-    document.getElementById('future_co2_emit').appendChild(viewElement);
-  });
-}
-},{"../static/world_co2_ssp_cmip6.csv":"../static/world_co2_ssp_cmip6.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+vegaEmbed('#energy_consumption_map', yourVlSpec);
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -373,5 +383,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","future_co2_emit.js"], null)
-//# sourceMappingURL=/future_co2_emit.4a5ba184.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","energy_consumption_map.js"], null)
+//# sourceMappingURL=/energy_consumption_map.c1f19262.js.map

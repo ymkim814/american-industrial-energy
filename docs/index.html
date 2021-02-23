@@ -13,70 +13,18 @@
         <script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-lite-api"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/arquero@latest"></script>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
     </head>
 
     <body>
       <section class="title">
         <!-- <a href="/"> -->
-          CSE 412 Final Project: American Industrial Energy (test change!)
+          CSE 412 Final Project: American Industrial Energy
         <!-- </a> -->
       </section>
-       <!--
-      <section>
-        <h2>Final Project</h2>
-        <p>The final project will provide hands-on experience designing, implementing,
-          and deploying interactive visualizations. Your project should address a concrete
-          visualization challenge and should propose a novel, creative solution. The final
-          deliverable will take the form of a visual analysis tool or an explanatory narrative,
-          deployed as an interactive web page. More info on the
-          <a href='https://courses.cs.washington.edu/courses/cse412/21wi/fp.html'>course website</a>.
-        </p>
-      </section>
-      -->
-     <!--
-      <section>
-        <p><strong>This page is used mainly to demo how to embed visualizations. All visualizations below are
-          not perfect and need more iteration critiques before really publishing on a webpage.
-        </strong></p>
-      </section>
-     -->
-     <!--
-      <section id = "tableauDemo">
-        <h3>Embed a Tableau Visualization:</h3>
-        <div class='tableauPlaceholder' id='viz1612344209794' style='position: relative'>
-          <noscript>
-            <a href='#'>
-              <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;41&#47;412demo&#47;Sheet1&#47;1_rss.png' style='border: none' />
-            </a>
-          </noscript>
-          <object class='tableauViz'  style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='412demo&#47;Sheet1' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;41&#47;412demo&#47;Sheet1&#47;1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en' />
-          </object>
-        </div>
-        <script type='text/javascript'>
-        var divElement = document.getElementById('viz1612344209794');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        vizElement.style.width='85%';
-        vizElement.style.height=(divElement.offsetWidth*0.4)+'px';
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-      </section>
-    -->
+
       <section id="world_co2_emissions_section">
         <h3>Global carbon dioxide emissions since 1750:</h3>
         <div id="world_co2_emissions"></div>
@@ -88,6 +36,7 @@
             Our World in Data</a>
         </p>
       </section>
+
       <section id="hist_co2_conc_section">
         <h3>Atmospheric carbon dioxide concentrations since 1750:</h3>
         <div id="hist_co2_conc"></div>
@@ -101,6 +50,7 @@
             Mauna Loa Observatory/NOAA (1959-2020)</a>
         </p>
       </section>
+
       <section id="future_co2_emit_section">
         <h3>Future carbon dioxide emissions:</h3>
         <div id="future_co2_emit"></div>
@@ -110,6 +60,7 @@
             IPCC (AR6)</a>
         </p>
       </section>
+
       <section id="co2_by_fuel_section">
         <h3>Carbon dioxide emissions by fuel type:</h3>
         <div id="co2_by_fuel"></div>
@@ -122,6 +73,22 @@
           Source: <a href="https://www.eia.gov/tools/faqs/faq.php?id=73&t=11">EIA</a>
         </p>
       </section>
+
+      <section id="energy_consumption_map_section">
+        <h3> Energy consumption by county</h3>
+        <div id="energy_consumption_map" <="" div="">
+          <p> The amount of energy in mmBTU's each county consumed in 2016. A diverging-log scale is used to highlight the lowest and highest electricity consumers</p>
+          <div id="observablehq-test1-1a6a5012"></div>
+
+          <script type="module">
+            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+            import define from "https://api.observablehq.com/@isaack8/american-industrial-energy-handbook-data-wrangling.js?v=3";
+            new Runtime().module(define, name => {
+              if (name === "test1") return new Inspector(document.querySelector("#observablehq-test1-1a6a5012"));
+            });
+          </script>
+      </div></section>
+
       <div class="footer">
         <a href="https://courses.cs.washington.edu/courses/cse412/21wi/">CSE 412 Data Visualization</a>
         <a href="http://www.washington.edu">University of Washington</a>
