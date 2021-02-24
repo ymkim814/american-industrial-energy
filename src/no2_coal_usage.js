@@ -38,8 +38,8 @@ function drawPointsVegaLite() {
   vl.markPoint({color:'black'})
   .data(no2Array)
   .encode(
-      vl.x().fieldQ('Days NO2'),
-      vl.y().fieldQ('MMBTU'),
+      vl.x().fieldQ('Days NO2').title('Annual NO2 Emissions by county'),
+      vl.y().fieldQ('MMBTU').title('Coal use (MMBTU)'),
       vl.tooltip(['County', 'State']),
   )
   .width(450)

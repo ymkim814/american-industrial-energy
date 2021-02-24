@@ -119,7 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"../static/coal_consumption_air_quality.csv":[function(require,module,exports) {
 module.exports = "/coal_consumption_air_quality.0337689e.csv";
-},{}],"co2_coal_usage.js":[function(require,module,exports) {
+},{}],"no2_coal_usage.js":[function(require,module,exports) {
 "use strict";
 
 var _coal_consumption_air_quality = _interopRequireDefault(require("../static/coal_consumption_air_quality.csv"));
@@ -162,7 +162,7 @@ function drawPointsVegaLite() {
   // your visualization goes here
   vl.markPoint({
     color: 'black'
-  }).data(no2Array).encode(vl.x().fieldQ('Days NO2'), vl.y().fieldQ('MMBTU'), vl.tooltip(['County', 'State'])).width(450).height(450).render().then(function (viewElement) {
+  }).data(no2Array).encode(vl.x().fieldQ('Days NO2').title('Annual NO2 Emissions by county'), vl.y().fieldQ('MMBTU').title('Coal use (MMBTU)'), vl.tooltip(['County', 'State'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
     document.getElementById('air_coal_usage').appendChild(viewElement);
@@ -196,7 +196,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51643" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60045" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -372,5 +372,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","co2_coal_usage.js"], null)
-//# sourceMappingURL=/co2_coal_usage.120a38b0.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","no2_coal_usage.js"], null)
+//# sourceMappingURL=/no2_coal_usage.fc81bd97.js.map

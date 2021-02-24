@@ -119,7 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"yYsN":[function(require,module,exports) {
 module.exports = "https://github.com/cse412-21w/american-industrial-energy/issues/coal_consumption_air_quality.03ddfbb1.csv";
-},{}],"IIWx":[function(require,module,exports) {
+},{}],"lGZw":[function(require,module,exports) {
 "use strict";
 
 var _coal_consumption_air_quality = _interopRequireDefault(require("../static/coal_consumption_air_quality.csv"));
@@ -162,11 +162,11 @@ function drawPointsVegaLite() {
   // your visualization goes here
   vl.markPoint({
     color: 'black'
-  }).data(no2Array).encode(vl.x().fieldQ('Days NO2'), vl.y().fieldQ('MMBTU'), vl.tooltip(['County', 'State'])).width(450).height(450).render().then(function (viewElement) {
+  }).data(no2Array).encode(vl.x().fieldQ('Days NO2').title('Annual NO2 Emissions by county'), vl.y().fieldQ('MMBTU').title('Coal use (MMBTU)'), vl.tooltip(['County', 'State'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
     document.getElementById('air_coal_usage').appendChild(viewElement);
   });
 }
-},{"../static/coal_consumption_air_quality.csv":"yYsN"}]},{},["IIWx"], null)
-//# sourceMappingURL=https://github.com/cse412-21w/american-industrial-energy/issues/co2_coal_usage.3a5b184a.js.map
+},{"../static/coal_consumption_air_quality.csv":"yYsN"}]},{},["lGZw"], null)
+//# sourceMappingURL=https://github.com/cse412-21w/american-industrial-energy/issues/no2_coal_usage.45905868.js.map
