@@ -48,7 +48,7 @@ function drawPointsVegaLite() {
   .then(viewElement => {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('air_coal_usage').appendChild(viewElement);
+    document.getElementById('air_coal_usage_section').appendChild(viewElement);
   });
 }
   

@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"yYsN":[function(require,module,exports) {
-module.exports = "https://github.com/cse412-21w/merican-industrial-energy.git/coal_consumption_air_quality.03ddfbb1.csv";
+module.exports = "https://github.com/cse412-21w/merican-industrial-energy/coal_consumption_air_quality.03ddfbb1.csv";
 },{}],"lGZw":[function(require,module,exports) {
 "use strict";
 
@@ -165,8 +165,8 @@ function drawPointsVegaLite() {
   }).data(no2Array).encode(vl.x().fieldQ('Days NO2').title('Annual NO2 Emissions by county'), vl.y().fieldQ('MMBTU').title('Coal use (MMBTU)'), vl.tooltip(['County', 'State'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('air_coal_usage').appendChild(viewElement);
+    document.getElementById('air_coal_usage_section').appendChild(viewElement);
   });
 }
 },{"../static/coal_consumption_air_quality.csv":"yYsN"}]},{},["lGZw"], null)
-//# sourceMappingURL=https://github.com/cse412-21w/merican-industrial-energy.git/no2_coal_usage.45905868.js.map
+//# sourceMappingURL=https://github.com/cse412-21w/merican-industrial-energy/no2_coal_usage.4013a20e.js.map
