@@ -117,12 +117,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../static/world_co2_emissions.csv":[function(require,module,exports) {
-module.exports = "/world_co2_emissions.a2492a3a.csv";
-},{}],"world_co2_emissions.js":[function(require,module,exports) {
+})({"../static/coal_consumption_air_quality.csv":[function(require,module,exports) {
+module.exports = "/coal_consumption_air_quality.0337689e.csv";
+},{}],"no2_coal_usage.js":[function(require,module,exports) {
 "use strict";
 
-var _world_co2_emissions = _interopRequireDefault(require("../static/world_co2_emissions.csv"));
+var _coal_consumption_air_quality = _interopRequireDefault(require("../static/coal_consumption_air_quality.csv"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -131,7 +131,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // With strict mode, you can not, for example, use undeclared variables
 
 
-var co2EmissionsArray = []; // used to store data later
+var no2Array = []; // used to store data later
 
 var options = {
   config: {// Vega-Lite default configuration
@@ -151,26 +151,24 @@ var options = {
 };
 vl.register(vega, vegaLite, options); // Again, We use d3.csv() to process data
 
-d3.csv(_world_co2_emissions.default).then(function (data) {
+d3.csv(_coal_consumption_air_quality.default).then(function (data) {
   data.forEach(function (d) {
-    co2EmissionsArray.push(d);
+    no2Array.push(d);
   });
-  drawBarVegaLite();
+  drawPointsVegaLite();
 });
 
-function drawBarVegaLite() {
-  // var sunshine = add_data(vl, sunshine.csv, format_type = NULL);
+function drawPointsVegaLite() {
   // your visualization goes here
-  vl.markBar({
-    filled: true,
+  vl.markPoint({
     color: 'black'
-  }).data(co2EmissionsArray).encode(vl.x().fieldQ('year').sort('none'), vl.y().fieldQ('co2'), vl.tooltip(['year', 'co2'])).width(450).height(450).render().then(function (viewElement) {
+  }).data(no2Array).encode(vl.x().fieldQ('Days NO2').title('Annual NO2 Emissions by county'), vl.y().fieldQ('MMBTU').title('Coal use (MMBTU)'), vl.tooltip(['County', 'State'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('world_co2_emissions').appendChild(viewElement);
+    document.getElementById('air_coal_usage_section').appendChild(viewElement);
   });
 }
-},{"../static/world_co2_emissions.csv":"../static/world_co2_emissions.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../static/coal_consumption_air_quality.csv":"../static/coal_consumption_air_quality.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -374,5 +372,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","world_co2_emissions.js"], null)
-//# sourceMappingURL=/world_co2_emissions.0ce95c02.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","no2_coal_usage.js"], null)
+//# sourceMappingURL=/no2_coal_usage.fc81bd97.js.map
