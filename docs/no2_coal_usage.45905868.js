@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"yYsN":[function(require,module,exports) {
-module.exports = "https://github.com/cse412-21w/american-industrial-energy/issues/coal_consumption_air_quality.03ddfbb1.csv";
+module.exports = "https://github.com/cse412-21w/merican-industrial-energy.git/coal_consumption_air_quality.03ddfbb1.csv";
 },{}],"lGZw":[function(require,module,exports) {
 "use strict";
 
@@ -169,4 +169,4 @@ function drawPointsVegaLite() {
   });
 }
 },{"../static/coal_consumption_air_quality.csv":"yYsN"}]},{},["lGZw"], null)
-//# sourceMappingURL=https://github.com/cse412-21w/american-industrial-energy/issues/no2_coal_usage.45905868.js.map
+//# sourceMappingURL=https://github.com/cse412-21w/merican-industrial-energy.git/no2_coal_usage.45905868.js.map
