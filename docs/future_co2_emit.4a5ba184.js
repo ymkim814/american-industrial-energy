@@ -163,7 +163,7 @@ function drawLineVegaLite() {
   // your visualization goes here
   vl.markLine({
     color: 'green'
-  }).data(co2EmitArray).encode(vl.x().fieldT('Year'), vl.y().fieldQ('SSP1-19'), vl.tooltip(['Year', 'SSP1-19'])).width(450).height(450).render().then(function (viewElement) {
+  }).data(co2EmitArray).encode(vl.x().fieldT('Year'), vl.y().fieldQ('SSP5-85'), vl.tooltip(['Year', 'SSP5-85'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
     document.getElementById('future_co2_emit').appendChild(viewElement);
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61273" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62229" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
