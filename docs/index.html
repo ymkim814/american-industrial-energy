@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>CSE 412 Project: American Industrial Energy</title>
-        <link rel="stylesheet" href="https://github.com/cse412-21w/american-industrial-energy/issues/style.f4156093.css">
+        <link rel="stylesheet" href="https://cse412-21w.github.io/american-industrial-energy/style.f4156093.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <!-- For using d3 -->
         <script src="https://d3js.org/d3.v6.min.js"></script>
@@ -98,7 +98,15 @@
         <h3> Energy consumption by county</h3>
         <div id="energy_consumption_map" <="" div="">
           <p> The amount of energy in mmBTU's each county consumed in 2016. A diverging-log scale is used to highlight the lowest and highest electricity consumers</p>
-          <iframe width="100%" height="803" frameborder="0" src="https://observablehq.com/embed/@isaack8/american-industrial-energy-handbook-data-wrangling?cells=viewof+r_color%2Cviewof+r_scale%2Ctest1"></iframe>
+          <div id="observablehq-test1-1a6a5012"></div>
+
+          <script type="module">
+            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+            import define from "https://api.observablehq.com/@isaack8/american-industrial-energy-handbook-data-wrangling.js?v=3";
+            new Runtime().module(define, name => {
+              if (name === "test1") return new Inspector(document.querySelector("#observablehq-test1-1a6a5012"));
+            });
+          </script>
       </div></section>
 
       <section id = "air_coal_usage_section">
@@ -115,12 +123,12 @@
 
       <!-- it is recommended to put js files before </body> -->
       <!-- or check load event fot addEventListener() if you want to put js in the <head> -->
-      <script src="https://github.com/cse412-21w/american-industrial-energy/issues/world_co2_emissions.f3a3a775.js"></script>
-      <script src="https://github.com/cse412-21w/american-industrial-energy/issues/hist_co2_conc.2262fbd6.js"></script>
-      <script src="https://github.com/cse412-21w/american-industrial-energy/issues/future_co2_emit.2b841fff.js"></script>
-      <script src="https://github.com/cse412-21w/american-industrial-energy/issues/future_co2_conc.56cc6e2d.js"></script>
-      <script src="https://github.com/cse412-21w/american-industrial-energy/issues/future_temps.0dccdb67.js"></script>
-      <script src="https://github.com/cse412-21w/american-industrial-energy/issues/co2_by_fuel.dca154be.js"></script>
+      <script src="https://cse412-21w.github.io/american-industrial-energy/world_co2_emissions.f3a3a775.js"></script>
+      <script src="https://cse412-21w.github.io/american-industrial-energy/hist_co2_conc.2262fbd6.js"></script>
+      <script src="https://cse412-21w.github.io/american-industrial-energy/future_co2_emit.2b841fff.js"></script>
+      <script src="https://cse412-21w.github.io/american-industrial-energy/future_co2_conc.56cc6e2d.js"></script>
+      <script src="https://cse412-21w.github.io/american-industrial-energy/future_temps.0dccdb67.js"></script>
+      <script src="https://cse412-21w.github.io/american-industrial-energy/co2_by_fuel.dca154be.js"></script>
       <script src="no2_coal_usage.js">
     </script src="no2_coal_usage.js"></div id="no2_coal_usage"></section id = "air_coal_usage_section"></body>
 

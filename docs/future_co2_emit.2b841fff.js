@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"UpAG":[function(require,module,exports) {
-module.exports = "https://github.com/cse412-21w/american-industrial-energy/issues/world_co2_ssp_cmip6.5c31193e.csv";
+module.exports = "https://cse412-21w.github.io/american-industrial-energy/world_co2_ssp_cmip6.5c31193e.csv";
 },{}],"G3NE":[function(require,module,exports) {
 "use strict";
 
@@ -170,4 +170,4 @@ function drawLineVegaLite() {
   });
 }
 },{"../static/world_co2_ssp_cmip6.csv":"UpAG"}]},{},["G3NE"], null)
-//# sourceMappingURL=https://github.com/cse412-21w/american-industrial-energy/issues/future_co2_emit.2b841fff.js.map
+//# sourceMappingURL=https://cse412-21w.github.io/american-industrial-energy/future_co2_emit.2b841fff.js.map
