@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"K6ks":[function(require,module,exports) {
-module.exports = "https://github.com/cse412-21w/merican-industrial-energy/future_temp.b1116825.csv";
+module.exports = "https://github.com/cse412-21w/american-industrial-energy/future_temp.b1116825.csv";
 },{}],"PD2Z":[function(require,module,exports) {
 "use strict";
 
@@ -170,4 +170,4 @@ function drawLineVegaLite() {
   });
 }
 },{"../static/future_temp.csv":"K6ks"}]},{},["PD2Z"], null)
-//# sourceMappingURL=https://github.com/cse412-21w/merican-industrial-energy/future_temps.0dccdb67.js.map
+//# sourceMappingURL=https://github.com/cse412-21w/american-industrial-energy/future_temps.0dccdb67.js.map
