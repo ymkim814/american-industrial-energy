@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"C4wL":[function(require,module,exports) {
-module.exports = "https://cse412-21w.github.io/american-industrial-energy/historical_co2_conc.4e2d4f6f.csv";
+module.exports = "https://github.com/cse412-21w/american-industrial-energy/issues/historical_co2_conc.4e2d4f6f.csv";
 },{}],"fD0u":[function(require,module,exports) {
 "use strict";
 
@@ -170,4 +170,4 @@ function drawLineVegaLite() {
   });
 }
 },{"../static/historical_co2_conc.csv":"C4wL"}]},{},["fD0u"], null)
-//# sourceMappingURL=https://cse412-21w.github.io/american-industrial-energy/hist_co2_conc.2262fbd6.js.map
+//# sourceMappingURL=https://github.com/cse412-21w/american-industrial-energy/issues/hist_co2_conc.2262fbd6.js.map

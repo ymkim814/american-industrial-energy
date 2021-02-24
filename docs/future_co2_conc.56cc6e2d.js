@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"POdQ":[function(require,module,exports) {
-module.exports = "https://cse412-21w.github.io/american-industrial-energy/future_co2_conc.f7ba5863.csv";
+module.exports = "https://github.com/cse412-21w/american-industrial-energy/issues/future_co2_conc.f7ba5863.csv";
 },{}],"i8TB":[function(require,module,exports) {
 "use strict";
 
@@ -170,4 +170,4 @@ function drawLineVegaLite() {
   });
 }
 },{"../static/future_co2_conc.csv":"POdQ"}]},{},["i8TB"], null)
-//# sourceMappingURL=https://cse412-21w.github.io/american-industrial-energy/future_co2_conc.56cc6e2d.js.map
+//# sourceMappingURL=https://github.com/cse412-21w/american-industrial-energy/issues/future_co2_conc.56cc6e2d.js.map

@@ -98,15 +98,7 @@
         <h3> Energy consumption by county</h3>
         <div id = "energy_consumption_map"</div>
           <p> The amount of energy in mmBTU's each county consumed in 2016. A diverging-log scale is used to highlight the lowest and highest electricity consumers</p>
-          <div id="observablehq-test1-1a6a5012"></div>
-
-          <script type="module">
-            import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-            import define from "https://api.observablehq.com/@isaack8/american-industrial-energy-handbook-data-wrangling.js?v=3";
-            new Runtime().module(define, name => {
-              if (name === "test1") return new Inspector(document.querySelector("#observablehq-test1-1a6a5012"));
-            });
-          </script>
+          <iframe width="100%" height="803" frameborder="0" src="https://observablehq.com/embed/@isaack8/american-industrial-energy-handbook-data-wrangling?cells=viewof+r_color%2Cviewof+r_scale%2Ctest1"></iframe>
       </section>
 
       <section id = "air_coal_usage_section">

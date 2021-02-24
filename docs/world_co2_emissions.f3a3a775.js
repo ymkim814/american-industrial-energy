@@ -118,7 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"Plkb":[function(require,module,exports) {
-module.exports = "https://cse412-21w.github.io/american-industrial-energy/world_co2_emissions.b492a617.csv";
+module.exports = "https://github.com/cse412-21w/american-industrial-energy/issues/world_co2_emissions.b492a617.csv";
 },{}],"OYfB":[function(require,module,exports) {
 "use strict";
 
@@ -171,4 +171,4 @@ function drawBarVegaLite() {
   });
 }
 },{"../static/world_co2_emissions.csv":"Plkb"}]},{},["OYfB"], null)
-//# sourceMappingURL=https://cse412-21w.github.io/american-industrial-energy/world_co2_emissions.f3a3a775.js.map
+//# sourceMappingURL=https://github.com/cse412-21w/american-industrial-energy/issues/world_co2_emissions.f3a3a775.js.map
