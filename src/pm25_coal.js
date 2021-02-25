@@ -29,10 +29,10 @@ d3.csv(coalData).then(function(data) {
   data.forEach(function(d){
     coalArray.push(d);
   })
-  drawLineVegaLite();
+  drawPointVegaLite();
 });
 
-function drawLineVegaLite() {
+function drawPointVegaLite() {
   // var sunshine = add_data(vl, sunshine.csv, format_type = NULL);
   // your visualization goes here
   vl.markPoint({color:'black'})

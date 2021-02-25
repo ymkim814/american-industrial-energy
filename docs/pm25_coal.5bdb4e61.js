@@ -155,10 +155,10 @@ d3.csv(_coal_consumption_air_quality.default).then(function (data) {
   data.forEach(function (d) {
     coalArray.push(d);
   });
-  drawLineVegaLite();
+  drawPointVegaLite();
 });
 
-function drawLineVegaLite() {
+function drawPointVegaLite() {
   // var sunshine = add_data(vl, sunshine.csv, format_type = NULL);
   // your visualization goes here
   vl.markPoint({
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55396" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49976" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -117,12 +117,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"UpAG":[function(require,module,exports) {
-module.exports = "https://cse412-21w.github.io/american-industrial-energy/world_co2_ssp_cmip6.5c31193e.csv";
-},{}],"G3NE":[function(require,module,exports) {
+})({"POdQ":[function(require,module,exports) {
+module.exports = "https://cse412-21w.github.io/american-industrial-energy/future_co2_conc.f7ba5863.csv";
+},{}],"i8TB":[function(require,module,exports) {
 "use strict";
 
-var _world_co2_ssp_cmip = _interopRequireDefault(require("../static/world_co2_ssp_cmip6.csv"));
+var _future_co2_conc = _interopRequireDefault(require("../static/future_co2_conc.csv"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -131,7 +131,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // With strict mode, you can not, for example, use undeclared variables
 
 
-var co2EmitArray = []; // used to store data later
+var co2ConcArray = []; // used to store data later
 
 var options = {
   config: {// Vega-Lite default configuration
@@ -151,9 +151,9 @@ var options = {
 };
 vl.register(vega, vegaLite, options); // Again, We use d3.csv() to process data
 
-d3.csv(_world_co2_ssp_cmip.default).then(function (data) {
+d3.csv(_future_co2_conc.default).then(function (data) {
   data.forEach(function (d) {
-    co2EmitArray.push(d);
+    co2ConcArray.push(d);
   });
   drawLineVegaLite();
 });
@@ -162,12 +162,12 @@ function drawLineVegaLite() {
   // var sunshine = add_data(vl, sunshine.csv, format_type = NULL);
   // your visualization goes here
   vl.markLine({
-    color: 'green'
-  }).data(co2EmitArray).encode(vl.x().fieldT('Year'), vl.y().fieldQ('SSP5-85'), vl.tooltip(['Year', 'SSP5-85'])).width(450).height(450).render().then(function (viewElement) {
+    color: 'firebrick'
+  }).data(co2ConcArray).encode(vl.x().fieldT('Year'), vl.y().fieldQ('CO2 (SSP 585)'), vl.tooltip(['Year', 'CO2 (SSP 585)'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('future_co2_emit').appendChild(viewElement);
+    document.getElementById('future_co2').appendChild(viewElement);
   });
 }
-},{"../static/world_co2_ssp_cmip6.csv":"UpAG"}]},{},["G3NE"], null)
-//# sourceMappingURL=https://cse412-21w.github.io/american-industrial-energy/future_co2_emit.2b841fff.js.map
+},{"../static/future_co2_conc.csv":"POdQ"}]},{},["i8TB"], null)
+//# sourceMappingURL=https://cse412-21w.github.io/american-industrial-energy/future_co2_conc.54c05ae7.js.map
