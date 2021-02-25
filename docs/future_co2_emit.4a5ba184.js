@@ -166,7 +166,7 @@ function drawLineVegaLite() {
   }).data(co2EmitArray).encode(vl.x().fieldT('Year'), vl.y().fieldQ('SSP5-85'), vl.tooltip(['Year', 'SSP5-85'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('future_co2_emit').appendChild(viewElement);
+    document.getElementById('future_co2').appendChild(viewElement);
   });
 }
 },{"../static/world_co2_ssp_cmip6.csv":"../static/world_co2_ssp_cmip6.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50256" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55396" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -166,7 +166,7 @@ function drawLineVegaLite() {
   }).data(co2ConcArray).encode(vl.x().fieldT('Year'), vl.y().fieldQ('CO2 (ppm)'), vl.tooltip(['Year', 'CO2 (ppm)'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('hist_co2_conc').appendChild(viewElement);
+    document.getElementById('world_co2_emissions').appendChild(viewElement);
   });
 }
 },{"../static/historical_co2_conc.csv":"../static/historical_co2_conc.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50256" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55396" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

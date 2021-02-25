@@ -32,52 +32,60 @@
           consumption of fossil fuels for the production of energy has steadily and nearly exponentially risen,
           and along with it the emissions of carbon dioxide.
           <br>
-          Source: <a href="https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv">
-            Our World in Data</a>
-        </p>
-      </section>
-
-      <section id = "hist_co2_conc_section">
-        <h3>Atmospheric carbon dioxide concentrations since 1750:</h3>
-        <div id="hist_co2_conc"></div>
-        <p>This has led to a steady rise in the atmospheric concentration of CO2 from about 278 ppm
+          This has led to a steady rise in the atmospheric concentration of CO2 from about 278 ppm
           before the Industrial Revolution to about 414 ppm in 2020.
           <br>
-          Source: <a href="http://www.climatechange2013.org/images/report/WG1AR5_AIISM_Datafiles.xlsx">
-            IPCC (1750-1958)</a>,
+          Source: <a href="https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv">
+            Our World in Data</a>,
           <br>
           <a href="https://www.esrl.noaa.gov/gmd/webdata/ccgg/trends/co2/co2_annmean_mlo.csv">
             Mauna Loa Observatory/NOAA (1959-2020)</a>
+          <br>
+          <p class="todo">TODO: Charts should be side by side and linked with brushing</p>
         </p>
-      </section>
 
-      <section id = "future_co2_emit_section">
+      <section id = "co2_temp_section">
+        <h3>Increased carbon dioxide in the atmosphere has caused global warming:</h3>
+        <div id="co2_temp"></div>
+        <p>Carbon dioxide is the primary greenhouse gas. Its increasing concentration has led to
+          an increase in temperatures across the globe.
+          <br>
+          Source: <a href="https://raw.githubusercontent.com/owid/co2-data/master/owid-co2-data.csv">
+            Our World in Data</a>,
+          <br>
+          <a href="https://www.esrl.noaa.gov/gmd/webdata/ccgg/trends/co2/co2_annmean_mlo.csv">
+            Mauna Loa Observatory/NOAA (1959-2020)</a>
+          <br>
+          <p class="todo">TODO: Add temperature chart; charts should be side by side and linked with brushing</p>
+        </p>
+
+      <section id = "future_co2_section">
         <h3>Future carbon dioxide emissions:</h3>
-        <div id="future_co2_emit"></div>
+        <div id="future_co2"></div>
         <p>Future CO2 emissions will determine CO2 concentrations, global temperatures, sea level change etc.
           <br>
+          Model results show increase in atmospheric CO2.
+          <br>
           Source: <a href="https://tntcat.iiasa.ac.at/SspDb/download/cmip6/SSP_CMIP6_201811.csv.zip">
-            IPCC (AR6)</a>
+          IPCC (AR6)</a>,
+          Source: <a href="https://esgf-node.llnl.gov/search/cmip6/">
+          GFDL model (IPCC, CMIP6)</a>
+          <br>
+        <p class="todo">TODO: Charts should be side by side and linked with brushing (and probably include
+          historic values</p>
+          for reference)
         </p>
       </section>
 
-      <section id = "fut_co2_conc_section">
-        <h3>Atmospheric carbon dioxide concentrations in the future:</h3>
-        <div id="fut_co2_conc"></div>
-        <p>Model results show increase in atmospheric CO2.
-          <br>
+      <section id = "fut_co2_conc_temp_section">
+        <h3>Future atmospheric carbon dioxide concentrations will determine future global warming:</h3>
+        <div id="fut_co2_conc_temp"></div>
+        <p>
           Source: <a href="https://esgf-node.llnl.gov/search/cmip6/">
             GFDL model (IPCC, CMIP6)</a>
-        </p>
-      </section>
-
-      <section id = "fut_temp_section">
-        <h3>Global average temperature in the future:</h3>
-        <div id="fut_temp"></div>
-        <p>Model results show increase in temperature.
           <br>
-          Source: <a href="https://esgf-node.llnl.gov/search/cmip6/">
-            GFDL model (IPCC, CMIP6)</a>
+        <p class="todo">TODO: Charts should be side by side and linked with brushing (and probably include
+          historic values for reference)</p>
         </p>
       </section>
 
@@ -91,6 +99,7 @@
           Coal is primarily carbon, whereas natural gas (methane, CH4) has an H:C ratio of 4.
           <br>
           Source: <a href="https://www.eia.gov/tools/faqs/faq.php?id=73&t=11">EIA</a>
+          <p class="todo">TODO: More descriptive tooltips</p>
         </p>
       </section>
 
@@ -99,6 +108,7 @@
         <div id="air"></div>
         <p>Coal usage can be linked to PM 2.5 in the air.
         </p>
+        <p class="todo">TODO: </p>
       </section>
 
       <section id = "energy_consumption_map_section">
@@ -107,6 +117,7 @@
           <iframe width="100%" height="803" frameborder="0" src="https://observablehq.com/embed/@isaack8/american-industrial-energy-handbook-data-wrangling?cells=viewof+r_color%2Cviewof+r_scale%2Ctest1"></iframe>
           <p> The amount of energy in mmBTU's each county consumed in 2016. A diverging-log scale is used to highlight the lowest and highest electricity consumers</p>
         </div>
+        <p class="todo">TODO: </p>
       </section>
 
       <section id = "pm25_section">
@@ -114,6 +125,7 @@
         <div id="pm25"></div>
         <p>Coal usage can be linked to PM 2.5 in the air.
         </p>
+        <p class="todo">TODO: </p>
       </section>
 
        <div class="footer">

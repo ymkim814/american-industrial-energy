@@ -166,7 +166,7 @@ function drawLineVegaLite() {
   }).data(co2ConcArray).encode(vl.x().fieldT('Year'), vl.y().fieldQ('Temperature (SSP 585)'), vl.tooltip(['Year', 'Temperature (SSP 585)'])).width(450).height(450).render().then(function (viewElement) {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('fut_temp').appendChild(viewElement);
+    document.getElementById('fut_co2_conc_temp').appendChild(viewElement);
   });
 }
 },{"../static/future_temp.csv":"../static/future_temp.csv"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50256" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55396" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

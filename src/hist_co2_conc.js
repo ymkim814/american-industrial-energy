@@ -49,7 +49,7 @@ function drawLineVegaLite() {
   .then(viewElement => {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('hist_co2_conc').appendChild(viewElement);
+    document.getElementById('world_co2_emissions').appendChild(viewElement);
   });
 }
   

@@ -49,7 +49,7 @@ function drawLineVegaLite() {
   .then(viewElement => {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('fut_temp').appendChild(viewElement);
+    document.getElementById('fut_co2_conc_temp').appendChild(viewElement);
   });
 }
   

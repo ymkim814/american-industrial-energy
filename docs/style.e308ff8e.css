@@ -49,5 +49,10 @@ p { margin: 0 0 10px 0; }
   color: #ce3333;
 }
 
+.todo {
+    color: #ff0000;
+    font-size: 14pt;
+}    
+
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
