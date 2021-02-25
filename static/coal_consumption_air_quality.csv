@@ -1,4 +1,4 @@
-COUNTY_FIPS,MECS_FT,SECTOR,MMBTU,Unnamed: 0.1,State,County,Year,Days with AQI,Good Days,Moderate Days,Unhealthy for Sensitive Groups Days,Unhealthy Days,Very Unhealthy Days,Hazardous Days,Max AQI,90th Percentile AQI,Median AQI,Days CO,Days NO2,Days Ozone,Days SO2,Days PM2.5,Days PM10
+COUNTY_FIPS,MECS_FT,SECTOR,MMBTU,Unnamed: 0.1,State,County,Year,Days with AQI,Good Days,Moderate Days,Unhealthy for Sensitive Groups Days,Unhealthy Days,Very Unhealthy Days,Hazardous Days,Max AQI,90th Percentile AQI,Median AQI,Days CO,Days NO2,Days Ozone,Days SO2,Days PM25,Days PM10
 1003,Coal,Manufacturing,45736.3029,0,Alabama,Baldwin,2016,279,247,32,0,0,0,0,87,51,37,0,0,221,0,58,0
 1003,Coal,Mining,14149.02636,0,Alabama,Baldwin,2016,279,247,32,0,0,0,0,87,51,37,0,0,221,0,58,0
 1027,Coal,Manufacturing,4664.472956,1,Alabama,Clay,2016,116,109,7,0,0,0,0,56,45,30,0,0,0,0,116,0

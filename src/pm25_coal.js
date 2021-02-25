@@ -1,8 +1,8 @@
-import coalAQI from '../static/coal_consumption_air_quality.csv'    // import dataset
+import coalData from '../static/coal_consumption_air_quality.csv'    // import dataset
 "use strict";     // the code should be executed in "strict mode".
                   // With strict mode, you can not, for example, use undeclared variables
 
-var no2Array = [];   // used to store data later
+var coalArray = [];   // used to store data later
 
 const options = {
   config: {
@@ -25,30 +25,30 @@ const options = {
 vl.register(vega, vegaLite, options);
 
 // Again, We use d3.csv() to process data
-d3.csv(coalAQI).then(function(data) {
+d3.csv(coalData).then(function(data) {
   data.forEach(function(d){
-    no2Array.push(d);
+    coalArray.push(d);
   })
-  drawPointsVegaLite();
+  drawLineVegaLite();
 });
 
-
-function drawPointsVegaLite() {
+function drawLineVegaLite() {
+  // var sunshine = add_data(vl, sunshine.csv, format_type = NULL);
   // your visualization goes here
   vl.markPoint({color:'black'})
-  .data(no2Array)
+  .data(coalArray)
   .encode(
-      vl.x().fieldQ('Days NO2').title('Annual NO2 Emissions by county'),
-      vl.y().fieldQ('MMBTU').title('Coal use (MMBTU)'),
+      vl.x().fieldQ('Days PM25'),
+      vl.y().fieldQ('MMBTU'),
       vl.tooltip(['County', 'State']),
-  )
+    )
   .width(450)
   .height(450)
   .render()
   .then(viewElement => {
     // render returns a promise to a DOM element containing the chart
     // viewElement.value contains the Vega View object instance
-    document.getElementById('air_coal_usage_section').appendChild(viewElement);
+    document.getElementById('pm25').appendChild(viewElement);
   });
 }
   
